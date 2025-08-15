@@ -42,6 +42,7 @@ export default function SignInForm(){
 
             if(res.status === "complete"){
                 await setActive({session: res.createdSessionId})
+                router.push("/dashboard")
             }
             else{
                 setAuthError("Sign In Error");
